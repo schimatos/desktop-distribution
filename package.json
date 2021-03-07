@@ -64,8 +64,7 @@
     "tsconfig-paths": "^3.9.0",
     "typescript": "^4.1.3",
     "webpack": "^5.11.0",
-    "webpack-cli": "^4.3.0",
-    "xi": "^0.0.1"
+    "webpack-cli": "^4.3.0"
   },
   "jest": {
     "preset": "ts-jest",
@@ -98,7 +97,6 @@
   },
   "dependencies": {
     "@ldfields/default-react": "^0.0.5",
-    "gl": "^4.9.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router": "^5.2.0",
