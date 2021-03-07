@@ -24,8 +24,9 @@ jobs:
           node-version: '14'
 
       - name: Install electron forge
-        run: npm i -g @electron-forge/cli
-        run: electron-forge import
+        run: |
+          npm i -g @electron-forge/cli
+          electron-forge import
 
       - name: Build/release Electron app
         uses: samuelmeuli/action-electron-builder@v1
