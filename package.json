@@ -36,6 +36,7 @@
     "build-logic-statement-ts": "^1.1.0",
     "copy-webpack-plugin": "^7.0.0",
     "cross-env": "^7.0.3",
+    "electron": "^12.0.0",
     "electron-builder": "^22.10.5",
     "eslint": "^7.17.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -82,7 +83,6 @@
   },
   "dependencies": {
     "@ldfields/default-react": "^0.0.5",
-    "electron": "^12.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "shacl-form-react": "^1.0.0-alpha.1"
