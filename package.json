@@ -1,6 +1,6 @@
 {
   "name": "schimatos-desktop-distribution",
-  "version": "v0.0.1",
+  "version": "v0.0.2",
   "description": "Desktop distribution of the Schímatos application",
   "main": "./dist/index.js",
   "scripts": {
