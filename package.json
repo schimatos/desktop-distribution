@@ -1,5 +1,5 @@
 {
-  "name": "@schimatos/desktop-distribution",
+  "name": "schimatos-desktop-distribution",
   "version": "v0.0.1",
   "description": "Desktop distribution of the Schímatos application",
   "main": "./dist/index.js",
@@ -36,7 +36,7 @@
     "webpack-cli": "^4.5.0"
   },
   "build": {
-    "appId": "com.schimatos.desktop",
+    "appId": "com.schimatos.desktop-distribution",
     "productName": "Schímatos Desktop",
     "directories": {
       "app": "./dist/",
