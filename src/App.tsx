@@ -5,7 +5,8 @@ import { PathFactory } from 'ldflex'
 import { namedNode } from '@rdfjs/data-model';
 import { Form } from 'shacl-form-react';
 import Input from '@ldfields/default-react';
-import { RdfObjectProxy } from 'rdf-object-proxy/dist';
+import { RdfObjectProxy } from 'rdf-object-proxy';
+import type { AnyResource } from 'rdf-object-proxy';
 import { RdfObjectLoader } from 'rdf-object';
 import { termToString } from 'rdf-string-ttl'
 import { Parser, Quad } from 'n3';
@@ -40,7 +41,7 @@ export default () => {
   const [{shaclEngine, shaclValue, dataEngine, dataValue, shacl, data, shaclPaths}, dispatch] = useReducer((s, a) => {
     console.log("use reducer called")
     const result = { ...s, ...a };
-    let shacl = undefined;
+    let shacl: Promise<AnyResource> | undefined = undefined;
     if (result.shaclEngine && result.shaclValue && (a.shaclEngine || a.shaclValue)) {
       console.log('pre create shacl object')
       let quads: Quad[] = [];
@@ -55,7 +56,8 @@ export default () => {
     if (result.dataEngine && result.dataValue && (a.dataEngine || a.dataValue)) {
       console.log('pre create path factory')
       data = new PathFactory({ context: {}, queryEngine: result.dataEngine });
-      data = data.create({ subject: namedNode(result.dataValue.value) })
+      // @ts-ignore
+      data = data?.create({ subject: namedNode(result.dataValue.value) })
     }
     return { ...result, ...(shacl ? {shacl} : {}), ...(data ? {data} : {}), count: result.count + 1 }
   }, {
