@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["index.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,8EAA4D;AAC5D,6DAA2C;AAC3C,wDAAsC","sourcesContent":["export * from './lib/ActorRdfResolveQuadPatternRdfJsSource';\nexport * from './lib/IRdfJsSourceExtended';\nexport * from './lib/RdfJsQuadSource';\n"]}
