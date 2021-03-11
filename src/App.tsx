@@ -1,6 +1,5 @@
 import React, { useReducer } from 'react';
 import ComunicaEngine from './ComunicaEngine'
-import Selection from './search-bar'
 // @ts-ignore
 import { PathFactory } from 'ldflex'
 import { namedNode } from '@rdfjs/data-model';
@@ -12,6 +11,7 @@ import { termToString } from 'rdf-string-ttl'
 import { Parser, Quad } from 'n3';
 import * as fs from 'fs';
 import dedent from 'dedent';
+import Selection from 'sparql-search-bar';
 
 async function getShacl(quads: Quad[], _resource: any) {
   const loader = new RdfObjectLoader({ context });
@@ -151,7 +151,11 @@ console.log("app data", validities, updates, count);
     <Selection
       queryEngine={dataEngine}
       pathFactory={new PathFactory({ context: {}, engine: dataEngine })}
-      value={dataValue}
+      // @ts-ignore
+      value={{
+        value: dataValue?.value,
+        termType: dataValue?.termType
+      }}
       onChange={e => {dispatch({ dataValue: e })}}
     />
     <br />
@@ -172,7 +176,11 @@ console.log("app data", validities, updates, count);
     <Selection
       queryEngine={shaclEngine}
       pathFactory={new PathFactory({ context: {}, engine: shaclEngine })}
-      value={shaclValue}
+      // @ts-ignore
+      value={{
+        value: shaclValue?.value,
+        termType: shaclValue?.termType
+      }}
       onChange={e => {
         dispatch({ shaclValue: e })
       }}
