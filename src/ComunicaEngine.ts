@@ -1,4 +1,4 @@
-import { newEngine, ActorInitSparql } from '../peer-dependencies/comunica/packages/actor-init-sparql';
+import { newEngine, ActorInitSparql } from './peer-dependencies/comunica/packages/actor-init-sparql';
 
 /**
  * Asynchronous iterator wrapper for the Comunica SPARQL query engine.
@@ -156,5 +156,6 @@ export default class ComunicaEngine {
 
 // Flattens the given array one level deep
 async function flattenAsync(array) {
+  // @ts-ignore
   return [].concat(...(await Promise.all(array)));
 }
