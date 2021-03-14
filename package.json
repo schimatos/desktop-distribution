@@ -77,7 +77,7 @@
     }
   },
   "dependencies": {
-    "@comunica/actor-init-sparql": "peer-dependencies/comunica/packages/actor-init-sparql",
+    "@comunica/actor-init-sparql": "file:peer-dependencies/comunica/packages/actor-init-sparql",
     "@jeswr/react-lazy-render": "^1.0.1",
     "@ldfields/default-react": "^0.0.6",
     "@ontologies/core": "^2.0.2",
