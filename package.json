@@ -81,6 +81,7 @@
     "@ldfields/default-react": "^0.0.6",
     "@ontologies/rdf": "^1.0.0",
     "@ontologies/rdfs": "^1.0.0",
+    "@comunica/actor-init-sparql": "peer-dependencies/comunica/packages/actor-init-sparql",
     "dedent": "^0.7.0",
     "ldflex": "^2.12.0",
     "n3": "^1.8.1",

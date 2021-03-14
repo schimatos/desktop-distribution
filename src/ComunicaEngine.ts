@@ -1,4 +1,4 @@
-import { newEngine, ActorInitSparql } from './peer-dependencies/comunica/packages/actor-init-sparql';
+import { newEngine, ActorInitSparql } from '@comunica/actor-init-sparql';
 
 /**
  * Asynchronous iterator wrapper for the Comunica SPARQL query engine.
