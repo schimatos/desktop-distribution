@@ -4,7 +4,7 @@
   "description": "Desktop distribution of the Schímatos application",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "( cd peer-dependencies/comunica && lerna link ) && tsc && cross-env NODE_ENV=production webpack --progress --color",
+    "build": "( cd peer-dependencies/comunica && lerna link ) && npm link peer-dependencies/comunica/packages/actor-init-sparql && tsc && cross-env NODE_ENV=production webpack --progress --color",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
