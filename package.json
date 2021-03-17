@@ -4,8 +4,8 @@
   "description": "Desktop distribution of the Schímatos application",
   "main": "./dist/index.js",
   "scripts": {
-    "lib:build": "( cd peer-dependencies/comunica && lerna link ) && npm link peer-dependencies/comunica/packages/actor-init-sparql && tsc && cross-env NODE_ENV=production webpack --progress --color",
-    "build": "( cd peer-dependencies/comunica && lerna link ) && npm link peer-dependencies/comunica/packages/actor-init-sparql",
+    "build": "( cd peer-dependencies/comunica && lerna link ) && tsc && cross-env NODE_ENV=production webpack --progress --color",
+    "old:build": "rimraf lib && ( cd peer-dependencies/comunica && lerna link ) && npm link peer-dependencies/comunica/packages/actor-init-sparql && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -37,6 +37,7 @@
     "lodash": "^4.17.21",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "rimraf": "^2.7.1",
     "typescript": "^4.2.3",
     "webpack": "^5.24.3",
     "webpack-cli": "^4.5.0"
