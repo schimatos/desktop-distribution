@@ -19,13 +19,4 @@ jobs:
         with:
           node-version: 10
 
-      - name: Build/release Electron app
-        run: npm run electron-builder
-        with:
-          # GitHub token, automatically provided to the action
-          # (No need to define this secret in the repo settings)
-          github_token: ${{ secrets.GH_TOKEN }}
-
-          # If the commit is tagged with a version (e.g. "v1.0.0"),
-          # release the app after building
-          release: true
+      - run: npm run electron-builder
