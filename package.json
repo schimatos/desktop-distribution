@@ -29,7 +29,7 @@
     "@types/react-select": "^4.0.13",
     "copy-webpack-plugin": "^8.0.0",
     "cross-env": "^7.0.3",
-    "electron": "^12.0.0",
+    "electron": "^15.5.5",
     "electron-builder": "^22.10.5",
     "electron-forge": "^5.2.4",
     "html-webpack-plugin": "^5.2.0",
