@@ -33,7 +33,7 @@
     "electron-builder": "^22.10.5",
     "electron-forge": "^5.2.4",
     "html-webpack-plugin": "^5.2.0",
-    "loader-utils": "^2.0.0",
+    "loader-utils": "^2.0.3",
     "lodash": "^4.17.21",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
